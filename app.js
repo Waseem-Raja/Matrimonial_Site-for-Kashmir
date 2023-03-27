@@ -187,6 +187,6 @@ app.post("/contactus", controller.contactus);
 
 
 //Listing to the server
-app.listen(process.env.port, () => {
+app.listen(process.env.port || 80, () => {
     console.log("listening on local host port 80");
 })

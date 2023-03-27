@@ -4,7 +4,7 @@
   "description": "\"Nikah project is a matrimonial site for kashmir\"",
   "main": "app.js",
   "scripts": {
-    "start": " nodemon app.js"
+    "start": " node app.js"
   },
   "author": "\"waseem Raja\"",
   "license": "ISC",
