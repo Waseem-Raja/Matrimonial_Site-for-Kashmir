@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/profile.css">
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Pacifico&display=swap" rel="stylesheet">
+    <title> Profile </title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md">
+        <p class="logo"><span>Nikah.</span>com</p>
+        <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-navigation">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+
+                    <form action="/deactivateaccount" method="post">
+                        <input type="email" name="emaild" value="<%=email%>" hidden id="">
+                        <abbr title="you can reactivate your account by logging in agian ">
+                    <button class="nav-link" id="btnprofff">Deactivate account</button></abbr>
+                    </form>
+                </li>
+                <li class="nav-item">
+                    <form action="/editprofile" method="post">
+                        <!-- <input type="text" name="username" id="oldu" value="<%=usernamee%>" hidden> -->
+                        <!-- <input type="text" name="password" id="oldp" value="<%=passwordd%>" hidden> -->
+                        <input type="text"  readonly value="<%=userr%>" name="id" id="id"
+                    required hidden>
+                        <button class="nav-link" id="btnprof">Edit profile</button>
+                    </form>
+
+                </li>
+                <li class="nav-item">
+
+                    <form action="/editblogbtn" method="post">
+                        <input type="email" name="emailb" value="<%=email%>" hidden id="">
+                    <button class="nav-link" id="btnproff">Edit blog</button>
+                    </form>
+                </li>
+             
+                <li class="nav-item">
+                    <form action="/logout" method="post">
+                    <!-- <a class="nav-link" href="/logout">Log out</a> -->
+                    <button class="nav-link"id="bnprof">Logout</button>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="farming">
+        <form id="formm" action="/searchedprofiles" method="post">
+            <p>Search by: </p>
+            <!-- <input class="inp" type="number" placeholder="Age" name="Sage1" /> -->
+            <select class="inp" name="Sage1" id="" required>
+                <option class="hidden" selected disabled>Age
+                </option>
+             
+
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+                <option value="32">32</option>
+                <option value="33">33</option>
+                <option value="34">34</option>
+                <option value="35">35</option>
+                <option value="36">36</option>
+                <option value="37">37</option>
+                <option value="38">38</option>
+                <option value="39">39</option>
+                <option value="40">40</option>
+                <option value="41">41</option>
+                <option value="42">42</option>
+                <option value="43">43</option>
+                <option value="44">44</option>
+                <option value="45">45</option>
+                <option value="46">46</option>
+                <option value="47">47</option>
+                <option value="48">48</option>
+                <option value="49">49</option>
+                <option value="50">50</option>
+                <option value="51">51</option>
+                <option value="52">52</option>
+                <option value="53">53</option>
+                <option value="54">54</option>
+                <option value="55">55</option>
+                <option value="56">56</option>
+                <option value="57">57</option>
+                <option value="58">58</option>
+                <option value="59">59</option>
+                <option value="60">60</option>
+
+            </select>
+
+            <input type="text" name="" id="to" value="to" readonly style="background-color: transparent;">
+
+
+            <!-- <input class="inp" type="number" placeholder="Age" name="Sage" /> -->
+            <select class="inp" name="Sage2" id="" required>
+                <option class="hidden" selected disabled>Age
+                </option>
+
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+                <option value="28">28</option>
+                <option value="29">29</option>
+                <option value="30">30</option>
+                <option value="31">31</option>
+                <option value="32">32</option>
+                <option value="33">33</option>
+                <option value="34">34</option>
+                <option value="35">35</option>
+                <option value="36">36</option>
+                <option value="37">37</option>
+                <option value="38">38</option>
+                <option value="39">39</option>
+                <option value="40">40</option>
+                <option value="41">41</option>
+                <option value="42">42</option>
+                <option value="43">43</option>
+                <option value="44">44</option>
+                <option value="45">45</option>
+                <option value="46">46</option>
+                <option value="47">47</option>
+                <option value="48">48</option>
+                <option value="49">49</option>
+                <option value="50">50</option>
+                <option value="51">51</option>
+                <option value="52">52</option>
+                <option value="53">53</option>
+                <option value="54">54</option>
+                <option value="55">55</option>
+                <option value="56">56</option>
+                <option value="57">57</option>
+                <option value="58">58</option>
+                <option value="59">59</option>
+                <option value="60">60</option>
+
+            </select>
+            <!-- <input class="inp" type="number" placeholder="Height" name="Sheight" /> -->
+            <!-- <input class="inp" type="txt" placeholder="District" name="Sdistrict" /> -->
+            <select class="inp" name="Sdistrict">
+                <option class="hidden" selected disabled>District
+                </option>
+                <option value="Budgam">Budgam</option>
+                <option value="Baramulla">Baramulla</option>
+                <option value="Srinager">Srinager</option>
+                <option value="Bandipora">Bandipora</option>
+                <option value="Kupwara">Kupwara</option>
+                <option value="Ganderbal">Ganderbal</option>
+                <option value="Kulgam">Kulgam</option>
+                <option value="Pulwama">Pulwama</option>
+                <option value="Anantnag">Anantnag</option>
+                <option value="Shopian">Shopian</option>
+            </select>
+
+            <!-- setting value of gender in search bar -->
+            <% if(gender=="male" ){ %>
+                <input class="inp" type="text" readonly="true" placeholder="female" value="female" name="Sgender" />
+                <% } else { %>
+                    <input class="inp" type="text" readonly="true" placeholder="male" value="male" name="Sgender" />
+                    <% } %>
+
+                        <input class="inp" type="text" name="Suser" value="<%= usernamee %>" hidden />
+                        <button class="bn53">Search</button>
+        </form>
+    </div>
+    </br>
+    <div class="container emp-profile">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="profile-img">
+                    <img src="<%=profilepic %>" alt="/static/alt.jpg" id="prof" />
+                </div>
+
+            </div>
+            <div class="col-md-6">
+                <div class="profile-head">
+                    <h5 id="nam">
+                        <%= Name %>
+                    </h5>
+                    <abbr title="Profession">
+                        <h6 id="pro">
+                            <%= profession %>
+                            <!-- <%= userr %> -->
+                        </h6>
+                    </abbr>
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab"
+                                aria-controls="home" aria-selected="true">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab"
+                                aria-controls="profile" aria-selected="false">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div >
+               <form id="form2" style="display: none;">
+                <p>we care about your privacy, your mobile phone number won't be 
+                    visible to anyone!
+                </p>
+            </form>
+        </div>
+        <!--<div>
+            
+            <form id="form2" action="/visibilty" method="post" style="display: none;">
+                <p>You have full freedom & control over who sees your personal details.
+                    its upto you what do you want to share with people vice versa
+                    note: by default your username , gender, email, district etc will be public
+                </p>
+                <ul>
+                    <li>
+                        <label class="toggle">
+                            <input class="toggle-checkbox" type="checkbox" id="cname" name="Cname"  value="off" unchecked>
+                            <div class="toggle-switch"></div>
+                            <span class="toggle-label">Name</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="toggle">
+                            <input class="toggle-checkbox" type="checkbox" id="cphone" name="Cphoneno" value="off" unchecked>
+                            <div class="toggle-switch"></div>
+                            <span class="toggle-label">Phone Number</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="toggle">
+                            <input class="toggle-checkbox" type="checkbox" id="cprofile" name="Cprofile" value="off" unchecked>
+                            <div class="toggle-switch"></div>
+                            <span class="toggle-label">Profile Picture</span>
+                        </label>
+                    </li>
+                    <li>
+                        <label class="toggle">
+                            <input class="toggle-checkbox" type="checkbox" id="cheight" name="Cheight" value="off" unchecked>
+                            <div class="toggle-switch"></div>
+                            <span class="toggle-label">Height</span>
+                        </label>
+                    </li>
+                    <button class="bn53" onclick="getcheck()">Apply</button>
+
+                </ul>
+            </form>
+         </div> -->
+        <div class="row">
+            <div class="col-md-4">
+                <div class="profile-work">
+                    <p>SOCIAL MEDIA</p>
+                    <a href="#">Instagram</a><br />
+                    <a href=#>Facebook</a><br />
+                    <a href="#">whatsapp</a>
+                    <p>PROFESSION</p>
+                    <a href="#">LinkedIn</a><br />
+
+
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="tab-content profile-tab" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>User Id</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>
+                                    <%= usernamee %>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            Bio:
+                            <p id="pbio">
+                                <%=bio%>
+                            </p>
+                        </div>
+                        <!-- <div class="row">
+                            <div class="col-md-6">
+                                <label>Name</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>
+                                    <%= Name %>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Gender</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>
+                                    <%= gender %>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Age</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>
+                                    <%= Age %>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Height</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>
+                                    <%= Height %>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Dob</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>
+                                    <%= DOB %>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Email</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>
+                                    <%= email %>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Qualification</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>
+                                    <%= qualification %>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>District</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>
+                                    <%= district %>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Phone</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>
+                                    <%= phone %>
+                                </p>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Name</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>
+                                    <%= Name %>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Gender</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>
+                                    <%= gender %>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Age</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>
+                                    <%= Age %>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Divorced</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>
+                                    <%= Height %>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Dob</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>
+                                    <%= DOB %>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Email</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>
+                                    <%= email %>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Qualification</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>
+                                    <%= qualification %>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>District</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>
+                                    <%= district %>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Phone</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>
+                                    <%= phone %>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="row">
+                        <div class="col-md-6">
+                            <label>Phone</label>
+                        </div>
+                        <div class="col-md-6">
+                            <p>
+                                <%= phone %>
+                            </p>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+   <!-- Footer Section Start -->
+  <footer>
+    <div class="text">
+      <span>Created By <a href="#">Waseem Raja & Asiya Manzoor</a> | &#169; 2022 All Rights Reserved</span>
+    </div>
+  </footer>
+    <script src="/static/Profile.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
+
+
+<!-- <footer class="page-footer">
+    <div class="container">
+        
+        <div class="col-lg-4 col-md-4 col-sm-12">
+            
+            <marquee id="show" direction="left" style="background: transparent;"></marquee>
+            <a href="/"><button class="bn53" id="flog">log out</button></a>
+        </div>
+
+    </div>
+    
+    
+</footer> -->

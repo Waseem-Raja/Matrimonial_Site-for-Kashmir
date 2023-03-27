@@ -1,0 +1,418 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    background: #f2f6e9;
+}
+
+.navbar {
+    background: #4070f4;
+    font-family: inherit;
+    font-size: 20px;
+}
+
+.nav-link, .navbar-brand {
+    color: #fff;
+    cursor: pointer;
+}
+
+.nav-link {
+    margin-right: 1em !important;
+}
+
+.nav-link:hover {
+    color: #000;
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+.emp-profile {
+    padding: 3%;
+    margin-top: 0%;
+    margin-bottom: 3%;
+    border-radius: 0.5rem;
+    background: #fff;
+}
+
+.profile-img {
+    text-align: center;
+}
+
+.profile-img img {
+    width: 44%;
+    height: 100%;
+}
+
+.profile-img .file {
+    position: relative;
+    overflow: hidden;
+    margin-top: -20%;
+    width: 70%;
+    border: none;
+    border-radius: 0;
+    font-size: 15px;
+    background: #212529b8;
+}
+
+.profile-head h5 {
+    color: #333;
+}
+
+.profile-head h6 {
+    color: #0062cc;
+}
+
+.proile-rating span {
+    color: #495057;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.profile-head .nav-tabs {
+    margin-bottom: 5%;
+}
+
+.profile-head .nav-tabs .nav-link {
+    font-weight: 600;
+    border: none;
+}
+
+.profile-head .nav-tabs .nav-link.active {
+    border: none;
+    border-bottom: 2px solid #0062cc;
+}
+
+.profile-work {
+    padding: 14%;
+    margin-top: -15%;
+}
+
+.profile-work p {
+    font-size: 12px;
+    color: #818182;
+    font-weight: 600;
+    margin-top: 10%;
+}
+
+.profile-work a {
+    text-decoration: none;
+    color: #2376ca;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.profile-work ul {
+    list-style: none;
+}
+
+.profile-tab label {
+    font-weight: 600;
+}
+
+.profile-tab p {
+    font-weight: 600;
+    color: #0062cc;
+}
+
+/* 
+.page-footer {
+    background-color: #222;
+    color: #ccc;
+    padding: 60px 0 30px;
+    font-family: ui-serif;
+}
+
+.footer-copyright {
+    color: #666;
+    padding: 40px 0;
+} */
+
+.editpop {
+    margin-top: 8px;
+    background: transparent;
+    color: white;
+    border: hidden;
+}
+
+#imggg {
+    width: 20px;
+    height: 20px;
+}
+
+.farming {
+    background-color: rgb(241 241 241);
+    text-align: center;
+}
+
+#btnnn {
+    border-radius: 20px;
+    background-color: #8fa3e4;
+}
+
+.inp {
+    text-align: center;
+    border-radius: 21px;
+    color: black;
+    width: 172px;
+    height: 31px;
+}
+
+#btnnn:hover {
+    background-color: #9cdd89;
+}
+
+#prof {
+    border-radius: 48%;
+    width: 54%;
+    height: 30%;
+    border-style: double;
+    border-color: cadetblue;
+}
+
+#pbio {
+    border-radius: -3%;
+    border-style: outset;
+    text-align: center;
+    height: 143px;
+    width: 91%;
+    color: darkcyan;
+    font-family: monospace;
+    font-size: x-large;
+    margin-top: 2px;
+}
+
+#nam {
+    font-size: 3.25rem;
+}
+
+#pro {
+    font-size: 2rem;
+}
+
+#btnprof {
+    background: transparent;
+    border: aliceblue;
+}
+#bnprof {
+    background: transparent;
+    border: aliceblue;
+}
+#btnproff {
+    background: transparent;
+    border: aliceblue;
+}
+#btnprofff {
+    background: transparent;
+    border: aliceblue;
+}
+
+/* Search button */
+.bn53 {
+    background-color: #2979e8;
+    padding: 7px;
+    width: 100px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    animation: bn53bounce 4s infinite;
+    cursor: pointer;
+    border-radius: 17px;
+    font-size: 15px;
+    border-style: outset;
+    color: white;
+}
+
+@keyframes bn53bounce {
+
+    5%,
+    50% {
+        transform: scale(1);
+    }
+
+    10% {
+        transform: scale(1);
+    }
+
+    15% {
+        transform: scale(1);
+    }
+
+    20% {
+        transform: scale(1) rotate(-5deg);
+    }
+
+    25% {
+        transform: scale(1) rotate(5deg);
+    }
+
+    30% {
+        transform: scale(1) rotate(-3deg);
+    }
+
+    35% {
+        transform: scale(1) rotate(2deg);
+    }
+
+    40% {
+        transform: scale(1) rotate(0);
+    }
+}
+
+.bn53:hover {
+    background-color: white;
+    color: #4070f4;
+}
+
+/* to texxt */
+#to {
+    color: black;
+    font-size: 20px;
+    width: 34px;
+    text-align: center;
+    border: transparent;
+    font-family: monospace;
+}
+
+#show {
+    font-family: monospace;
+    font-size: 26px;
+    resize: none;
+    width: 350%;
+    height: 75px;
+    display: inline-block;
+    margin-left: -2px;
+    color: darkcyan;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+#flog {
+    margin-left: 314%;
+    display: inline-block;
+}
+
+/* to hide the dotted underline caused by abbr  */
+abbr[title] {
+    text-decoration: none !important;
+}
+
+
+
+#form2 {
+    margin-left: 25%;
+    border-style: double;
+    color: black;
+    font-size: larger;
+    font-family: serif;
+    width: 675px;
+    margin-top: -1%;
+    background-color: cornsilk;
+}
+
+/* Visibility form */
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, ".SFNSText-Regular", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
+}
+
+.toggle {
+    cursor: pointer;
+    display: inline-block;
+}
+
+.toggle-switch {
+    display: inline-block;
+    background: #ccc;
+    border-radius: 16px;
+    width: 58px;
+    height: 32px;
+    position: relative;
+    vertical-align: middle;
+    transition: background 0.25s;
+}
+
+.toggle-switch:before, .toggle-switch:after {
+    content: "";
+}
+
+.toggle-switch:before {
+    display: block;
+    background: linear-gradient(to bottom, #fff 0%, #eee 100%);
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    transition: left 0.25s;
+}
+
+.toggle:hover .toggle-switch:before {
+    background: linear-gradient(to bottom, #fff 0%, #fff 100%);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.5);
+}
+
+.toggle-checkbox:checked+.toggle-switch {
+    background: #56c080;
+}
+
+.toggle-checkbox:checked+.toggle-switch:before {
+    left: 30px;
+}
+
+.toggle-checkbox {
+    position: absolute;
+    visibility: hidden;
+}
+
+.toggle-label {
+    margin-left: 5px;
+    position: relative;
+    top: 2px;
+}
+
+#btn {
+    background: transparent;
+    border: none;
+    color: white;
+}
+
+/* Footer CSS */
+footer {
+    background: #4070f4;
+    padding: 15px 0;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+footer .text span {
+    font-size: 17px;
+    font-weight: 400;
+    color: #fff;
+}
+
+footer .text span a {
+    font-weight: 500;
+    color: #FFF;
+}
+
+footer .text span a:hover {
+    text-decoration: underline;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 25px;
+    color: var(--black);
+}
+
+.logo span {
+    color: #ffffff;
+    font-size: 33px;
+    font-family: sans-serif;
+}

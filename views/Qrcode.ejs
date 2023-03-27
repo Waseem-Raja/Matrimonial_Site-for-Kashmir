@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>QR Code Scanner </title>
+  <link rel="stylesheet" href="/static/css/Qrcode.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Font Awesome CDN Link for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <form>
+      <input type="file" id="filee" accept="image/jpg, image/jpeg, image/png" hidden>
+      <img src="#" alt="qr-code">
+      <div class="content">
+        <i class="fas fa-cloud-upload"></i>
+        <p id="textt">Upload Your Adhar QR Code</p>
+      </div>
+      <!-- <input type="text" id="adhar" value="" name="Adharr" hidden>
+        <button id="btnn" hidden>Go</button> -->
+    </form>
+    <form action="/registration" method="post" style="display: none;">
+      <input type="text" id="adhar" value="" name="Adharr" >
+      <input type="text" id="nname" value="" name="AdName" >
+      <input type="text" id="Agender" value="" name="Adgender" >
+      <input type="text" id="Adistrict" value="" name="Addistrict" >
+      <input type="text" id="Adob" value="" name="Adob" >
+      <button id="btnn" >Go</button>
+    </form>
+    <div class="details">
+      <textarea spellcheck="false" disabled>
+        </textarea>
+      <!-- <div class="buttons">
+          <button class="close">Close</button>
+          <button class="copy">Copy Text</button>
+        </div> -->
+    </div>
+  </div>
+
+  <script src="/static/js/Qrcode.js"></script>
+</body>
+
+</html>

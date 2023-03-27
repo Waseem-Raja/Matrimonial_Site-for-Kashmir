@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <title>EditProfile</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/css/EditProfile.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+</head>
+
+<body>
+
+
+
+    <div class="container">
+        <div class="title">Edit Profile</div>
+        <div>
+            <p id="redi">your newly choosen username might be taken by someone else</p>
+        </div>
+        <div class="content">
+            <form action="/EditProfilee" method="post" id="edpro">
+
+                <input type="text" readonly value="<%=userr%>" name="id" id="id" required hidden>
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details"></span>
+                        <img src="<%=profilepic%>" alt="img loading" id="prof">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Username</span>
+                        <input type="text" placeholder="Enter Name" name="pname" onpaste="return false;" id="pname"
+                            value="<%=username%>" onkeypress="return event.charCode != 32" minlength="6" maxlength="10">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Profile</span>
+                        <input type="file" name="pprofile" id="pprofile" accept="image/jpg, image/jpeg, image/png">
+                    </div>
+
+                    <div class="input-box">
+                        <span class="details">Divorced</span>
+                        <!-- <input type="number" placeholder="Enter Height" name="pheight" id="pheight" -->
+                        <!-- value="<%=Eheight%>"> -->
+                        <!-- Divorced: -->
+                        <select name="pheight" id="pheight">
+
+
+                            <% if(Eheight=="Yes" ){ %>
+                                <option value="<%=Eheight%>">
+                                    <%=Eheight%>
+                                </option>
+                                <option value="No">No</option>
+                                <% }else { %>
+                                    <option value="<%=Eheight%>">
+                                        <%=Eheight%>
+                                    </option>
+                                    <option value="Yes">Yes</option>
+                                    <% } %>
+
+
+
+                        </select>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Phone Number</span>
+                        <input type="number" value="<%= Ephone %>"" placeholder=" Enter phone no." name="pphone"
+                            id="pphone" pattern="/^-?\d+\.?\d*$/" onKeyPress="if(this.value.length==10) return false;"
+                            onpaste="return false;">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Password</span>
+                        <input type="password" placeholder="Enter Password" value="<%= Epassword %>" name="ppassword"
+                            id="ppassword" minlength="8" maxlength="10" v-model:value="" pattern="[A-Za-z0-9]+"
+                            onkeydown="if(['Space'].includes(arguments[0].code)){return false;}"
+                            onpaste="return false;">
+                    </div>
+                    <i class="far fa-eye" id="togglePassword"></i>
+
+
+                    <div class="input-box">
+                        <span class="details">Profession</span>
+                        <input type="text" placeholder="Enter Profession" value="<%= Eprofession %>" name="pproffesion"
+                            id="pproffesion" minlength="8" maxlength="18" onpaste="return false;">
+                    </div>
+
+
+                    <div class="input-box">
+                        <span class="details">Bio</span>
+                        <textarea placeholder="Enter Bio" cols="30" rows="10" value="<%= Ebio %>" maxlength=" 181"
+                            name="pBio" id="pbio" onpaste="return false;"><%= Ebio %></textarea>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">District</span>
+                        <select class="details" name="pdistrict" id="pdistrict">
+                            <option value="<%=Edistrict%>">
+                                <%=Edistrict%>
+                            </option>
+                            <option value="Budgam">Budgam</option>
+                            <option value="Baramulla">Baramulla</option>
+                            <option value="Srinager">Srinager</option>
+                            <option value="Bandipora">Bandipora</option>
+                            <option value="Kupwara">Kupwara</option>
+                            <option value="Ganderbal">Ganderbal</option>
+                            <option value="Kulgam">Kulgam</option>
+                            <option value="Pulwama">Pulwama</option>
+                            <option value="Anantnag">Anantnag</option>
+                            <option value="Shopian">Shopian</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="bn53">Save</button>
+            </form>
+        </div>
+
+
+    </div>
+    </div>
+
+</body>
+<script src="/static/js/EditProfile.js"></script>
+
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="/static/css/blog.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="col-div-6">
+                <p class="logo"><span>Nikah.</span>com</p>
+            </div>
+            <div class="col-div-6">
+                <ul class="nav">
+                    <li><a href="/">Home</a></li>
+                    <!-- <li><a href="#">Latest</a></li> -->
+                    <li><a href="/contactus">Contact</a></li>
+                    <!-- <li><button>Subscribe</button></a></li> -->
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </header>
+
+    <section class="banner-section">
+        <div class="container">
+            <div class="col-div-6">
+                <h1 class="heading">Share your stories here<br> and let people know about how you found your soulmate
+                    through
+                    our website</h1>
+                <p class="p1">Already registered then try it!</p>
+                <!-- <img src="/static/images/blogtmg.jpg" id="imgblg" alt=""> -->
+                <!-- <p id="msg">You will only be able to post if you are registered with Nikah.com</p> -->
+                <button onclick="show()" id="tryit">Try it</button>
+                <button onclick="Hide()" style="display: none;" id="hide">Hide</button>
+                <form action="/postt" method="post" style="display: none;" id="fotp">
+
+                    <!-- <div class="input-box">
+                        <input type="email" id="Bemail" name="Bemail" placeholder="Enter Your Registered Email"
+                            required>
+                    </div> -->
+                    <br>
+                    <!-- <div class="input-box">
+                        <input type="text" name="Bpass" placeholder="Enter Your password" minlength="8" maxlength="10" required>
+                    </div>
+                    <br> -->
+                    
+                    <div class="input-box">
+                        <!-- <input type="text" name="Bpass" placeholder="Enter Your password" required> -->
+                        <label for="imageb" id="i">blog image </label>
+                        <input type="file" name="imageb" id="imageb" accept="image/jpg, image/jpeg, image/png" required>
+                    </div>
+                    <br>
+                    <div class="input-box">
+                        <input type="text" name="Btitle" placeholder="Title of your story" maxlength="20" required>
+                    </div>
+                    <br>
+                    <div class="input-box">
+                        <input type="date" name="Bdate" placeholder="date" hidden>
+                    </div>
+                    <br>
+                    <div class="input-box">
+                        <textarea name="Bstory" id="tarea" cols="80" rows="10" placeholder="write your story here"
+                            maxlength="800" required></textarea>
+
+                        <button id="btnb">Post</button>
+                    </div>
+                </form>
+            </div>
+
+
+        </div>
+
+        </div>
+    </section>
+
+    <section>
+        <div class="container" id="hori">
+            <br><br>
+            <div class="col-div-6">
+                <% for (let i=0; i<blogdata.length; i++) { %>
+                    <div class="box-1">
+                        <img src="<%=blogdata[i].image%>" class="b-img">
+                        <h3 class="heading1">
+                            <%=blogdata[i].title%>
+                        </h3>
+                        <!-- <p class="text">
+                            <%=blogdata[i].story%>.substring(1, 20) 
+                        </p> -->
+                        <span class="name">
+                            <%=blogdata[i].Date%>
+                        </span>
+                        <form action="/readstory" method="post">
+                            <input type="email" name="email" value="<%=blogdata[i].email%>" hidden>
+                            <button class="bn53">Read</button>
+                        </form>
+                    </div>
+                    <% } %>
+            </div>
+
+
+        </div>
+
+        <div class="clearfix"></div>
+
+    </section>
+
+
+    <br><br>
+
+
+
+
+    <!-- <section class="foot-section">
+        <div class="container">
+            <div class="foot-inner">
+                <h1 class="heading" style="margin: 0px;">Do contact us</h1>
+                <p class="p1">If you have any questions, 
+                    concerns or feedback for us, we
+                     would love to hear it. Feel free to get in touch </p>
+                <button>contact</button>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <footer>
+        <div class="container">
+            <p>Copyright@ Nikah.com</p>
+        </div>
+    </footer>
+
+</body>
+<script src="/static/js/blog.js"></script>
+
+</html>

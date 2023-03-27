@@ -1,0 +1,93 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit blog</title>
+    <link rel="stylesheet" href="/static/css/editblog.css">
+</head>
+
+<body>
+    <p>Edit blog</p>
+    <img src="/static/images/Frame-6266192.webp" id="blg" alt="">
+    <form action="/updateblog" method="post">
+    
+       <input type="text" name="titleu" value="<%=title%>" id="titlee" required>
+       <textarea name="storyu" id="stry" required><%=storyy%></textarea>
+        <input type="email" name="emailu" value="<%= email%>" hidden id="">
+        <button class="bn53">save</button>
+
+    </form>
+</body>
+
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit blog</title>
+    <link rel="stylesheet" href="/static/css/editblog.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <!-- <script type="text/javascript">
+        (function () {
+            emailjs.init("X8IPHuUEO8RRoEvaI");
+        })();
+    </script> -->
+</head>
+
+<body>
+    <div class="container">
+        <div class="inner">
+            <!-- <img src="Images/images.png" alt=""> -->
+            <div class="panel panel-left">
+                <div class="panel-content">
+                    <div class="image-background">
+                        <h5 id="getintouch">Edit blog</h5>
+                        <img id="Eimg" src="/static/images/Frame-6266192.webp" alt="">
+                    </div>
+                </div>
+                <!-- <a href="main.html"><button id="bckh">Back to home</button></a> -->
+            </div>
+
+            <div class="panel panel-right">
+                <div class="panel-content">
+                    <div class="form">
+                        <a id="ho" href="/contactus">Contact</a>
+                        
+                        <h1>Your blog will inspire thousands of kashmiri's, who are looking 
+                            for their partner's.</h1>
+
+                        <div>
+                            
+                            <form action="/updateblog" method="post">
+    
+                                <input type="file" name="imageb" id="imageb" accept="image/jpg, image/jpeg, image/png">
+                                
+                                <input type="text" name="titleu" value="<%=title%>" id="titlee" maxlength="20" >
+                                <br>
+                                <textarea name="storyu" id="message" maxlength="800"  ><%=storyy%></textarea>
+                                 <input type="email" name="emailu" value="<%= email%>" style="display:none">
+                                 <button id="btnnn">save</button>
+                         
+                             </form>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="menu"></div>
+</body>
+
+
+</html>

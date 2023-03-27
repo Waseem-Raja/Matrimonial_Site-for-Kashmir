@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/css/Search.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="team_container">
+            <div class="text">Searched results</div>
+        </div>
+        <ul>
+            <div class="row">
+                <!-- <%let i=0%> -->
+                <!--User design starts here-->
+                <% for (let i=0; i<profidata.length; i++) { %>
+                    <abbr title=" <%= profidata[i].name %>">
+                        <li>
+                            <div class="profile-card">
+                                <div class="profile-content">
+                                    <div class="profile-image">
+                                        <img src="<%= profidata[i].filee %>" alt="first user">
+                                    </div>
+                                    <div class="desc">
+                                        <h2>
+                                            <%= profidata[i].Name %>
+                                        </h2>
+                                        <h>
+                                            <%= profidata[i].Profession %>
+                                        </h>
+                                    </div>
+                                    <form action="/viewsearchedprofile" method="post">
+                                        <div class="btn-div">
+                                            <input type="hidden" value="<%= profidata[i].name %>" name="Vusername">
+                                            <a href="/view"><button class="bn53">View</button></a>
+                                        
+                                        </div>
+                                    </form>
+                                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=<%=profidata[i].emaill%>" id="mail"><button class="bn53">contact</button></a>
+                                </div>
+                            </div>
+                        </li>
+                    </abbr>
+                <% } %>
+
+            </div>
+        </ul>
+
+    </div>
+</body>
+
+</html>
